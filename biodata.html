@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe - Bio-Data</title>
+    <style>
+        /* Reuse the same styles from the main page */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        .nav-links a:hover, .nav-links a.active {
+            background-color: var(--secondary-color);
+        }
+        
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+        
+        .page-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: var(--primary-color);
+        }
+        
+        .bio-data {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: var(--shadow);
+        }
+        
+        .bio-section {
+            margin-bottom: 2rem;
+        }
+        
+        .bio-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-color);
+        }
+        
+        .bio-item {
+            margin-bottom: 1rem;
+            display: flex;
+        }
+        
+        .bio-item strong {
+            display: inline-block;
+            width: 200px;
+            color: var(--dark-color);
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-color);
+                padding: 1rem 0;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 0.5rem 0;
+                text-align: center;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .bio-item {
+                flex-direction: column;
+            }
+            
+            .bio-item strong {
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">John Doe</div>
+                <ul class="nav-links">
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="biodata.html" class="active">Bio-Data</a></li>
+                </ul>
+                <div class="menu-toggle">☰</div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Bio-Data Content -->
+    <div class="container">
+        <h1 class="page-title">Bio-Data</h1>
+        
+        <div class="bio-data">
+            <div class="bio-section">
+                <h2>Personal Information</h2>
+                <div class="bio-item">
+                    <strong>Full Name:</strong>
+                    <span>Shravan Kumar. U</span>
+                </div>
+                <div class="bio-item">
+                    <strong>Date of Birth:</strong>
+                    <span>July 22, 2005</span>
+                </div>
+                <div class="bio-item">
+                    <strong>Gender:</strong>
+                    <span>Male</span>
+                </div>
+                <div class="bio-item">
+                    <strong>Nationality:</strong>
+                    <span>Indian</span>
+                </div>
+                <div class="bio-item">
+                    <strong>Marital Status:</strong>
+                    <span>Single</span>
+                </div>
+                <div class="bio-item">
+                    <strong>Languages Known:</strong>
+                    <span>Malayalam, English, Kannada </span>
+                </div>
+            </div>
+            
+            <div class="bio-section">
+                <h2>Contact Details</h2>
+                <div class="bio-item">
+                    <strong>Address:</strong>
+                    <span>Dhanalakshmi nilaya vivekananda Nagar, Kasaragod Pincode: 611724</span>
+                </div>
+                <div class="bio-item">
+                    <strong>Phone:</strong>
+                    <span>+1 (123) 456-7890</span>
+                </div>
+                <div class="bio-item">
+                    <strong>Email:</strong>
+                    <span>shravan.kumar@gmail.com</span>
+                </div>
+            </div>
+            
+            <div class="bio-section">
+                <h2>Educational Background</h2>
+                <div class="bio-item">
+                    <strong>Computer Science Engineering:</strong>
+                    <span>Canara Engineering College(2023- 2027)</span>
+                </div>
+                <div class="bio-item">
+                    <strong>Bachelor of Information Technology:</strong>
+                    <span>State University, Town (2012-2016)</span>
+                </div>
+                <div class="bio-item">
+                    <strong>High School:</strong>
+                    <span>SGKHS kudlu (2010-2021)</span>
+                </div>
+            </div>
+            
+            <div class="bio-section">
+                <h2>Professional Experience</h2>
+                <div class="bio-item">
+                    <strong>Web Developer:</strong>
+                    <span>Tech Solutions Inc. (2020-Present)</span>
+                </div>
+                <div class="bio-item">
+                    <strong>Web Developer:</strong>
+                    <span>Digital Creations Agency (2018-2020)</span>
+                </div>
+                <div class="bio-item">
+                    <strong>Junior Developer:</strong>
+                    <span>WebStart Solutions (2016-2018)</span>
+                </div>
+            </div>
+            
+            <div class="bio-section">
+                <h2>Skills & Expertise</h2>
+                <div class="bio-item">
+                    <strong>Programming Languages:</strong>
+                    <span>HTML, CSS, JavaScript, PHP, Python</span>
+                </div>
+                <div class="bio-item">
+                    <strong>Frameworks & Libraries:</strong>
+                    <span>React, Node.js, Express, jQuery, Bootstrap</span>
+                </div>
+                <div class="bio-item">
+                    <strong>Databases:</strong>
+                    <span>MySQL, MongoDB, PostgreSQL</span>
+                </div>
+                <div class="bio-item">
+                    <strong>Tools & Platforms:</strong>
+                    <span>Git, GitHub, AWS, Docker, Figma</span>
+                </div>
+            </div>
+            
+            <div class="bio-section">
+                <h2>Achievements & Certifications</h2>
+                <div class="bio-item">
+                    <strong>UX Design Certificate:</strong>
+                    <span>Coursera (2021)</span>
+                </div>
+                <div class="bio-item">
+                    <strong>AWS Certified Developer:</strong>
+                    <span>Amazon Web Services (2020)</span>
+                </div>
+                <div class="bio-item">
+                    <strong>Best Project Award:</strong>
+                    <span>Digital Creations Agency (2019)</span>
+                </div>
+            </div>
+            
+            <div class="bio-section">
+                <h2>Hobbies & Interests</h2>
+                <div class="bio-item">
+                    <strong>Technical Interests:</strong>
+                    <span>Open Source Contribution, Tech Blogging, Hackathons</span>
+                </div>
+                <div class="bio-item">
+                    <strong>Creative Pursuits:</strong>
+                    <span>Photography, Digital Art, UI/UX Design</span>
+                </div>
+                <div class="bio-item">
+                    <strong>Recreational Activities:</strong>
+                    <span>Hiking, Reading, Traveling, Playing Guitar</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 John Doe. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
